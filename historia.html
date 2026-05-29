@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dacza Forest — HISTORIA</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#000;
+      color:white;
+      overflow-x:hidden;
+      padding-top:90px;
+      font-size:16px;
+    }
+
+    /* BACKGROUND SYSTEM */
+    body::before{
+      content:"";
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size:60px 60px;
+      z-index:-2;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:radial-gradient(circle at center, transparent 0%, black 85%);
+      z-index:-1;
+    }
+
+    /* HEADER — IDENTYCZNY */
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:80px;
+      padding:0 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:9999;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(3px);
+    }
+
+    .logo img{
+      height:70px;
+      width:auto;
+      display:block;
+      user-select:none;
+      -webkit-user-drag:none;
+    }
+
+    nav{
+      display:flex;
+      gap:40px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:700;
+      font-size:15px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      opacity:0.9;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      opacity:1;
+    }
+
+    /* HERO */
+    .hero{
+      padding:140px 10% 40px;
+    }
+
+    .hero h1{
+      font-size:70px;
+      font-weight:900;
+    }
+
+    .hero p{
+      margin-top:10px;
+      color:#aaa;
+      font-size:18px;
+      max-width:700px;
+      line-height:1.6;
+    }
+
+    /* TIMELINE */
+    .timeline{
+      position:relative;
+      padding:0 10% 120px;
+    }
+
+    /* LINIA GŁÓWNA */
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:10%;
+      top:0;
+      width:2px;
+      height:100%;
+      background:rgba(255,255,255,0.08);
+    }
+
+    .item{
+      position:relative;
+      margin-left:50px;
+      margin-bottom:55px;
+    }
+
+    .dot{
+      position:absolute;
+      left:-34px;
+      top:8px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:white;
+      box-shadow:0 0 18px rgba(255,255,255,0.25);
+    }
+
+    .date{
+      font-size:13px;
+      color:#888;
+      margin-bottom:6px;
+      letter-spacing:1px;
+    }
+
+    .item h2{
+      font-size:22px;
+      font-weight:800;
+      margin-bottom:6px;
+    }
+
+    .item p{
+      color:#bdbdbd;
+      line-height:1.7;
+      max-width:650px;
+      font-size:16px;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:40px 10%;
+      border-top:1px solid rgba(255,255,255,0.1);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .discord{
+      border:1px solid rgba(255,255,255,0.2);
+      padding:12px 20px;
+      border-radius:10px;
+      text-decoration:none;
+      color:white;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .discord:hover{
+      background:white;
+      color:black;
+    }
+
+    /* MOBILE */
+    @media(max-width:800px){
+
+      header{
+        padding:0 20px;
+      }
+
+      nav{
+        gap:20px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .timeline::before{
+        left:20px;
+      }
+
+      .item{
+        margin-left:45px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo">
+      </a>
+    </div>
+
+    <nav>
+      <a href="galeria.html">GALERIA</a>
+      <a href="historia.html">HISTORIA</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+
+    <h1>Historia</h1>
+
+    <p>
+      Etapy budowy leśnej bazy — od pierwszej decyzji, przez wybór miejsca, aż po testy w terenie.
+    </p>
+
+  </section>
+
+  <section class="timeline">
+
+    <div class="item">
+      <div class="dot"></div>
+      <div class="date">12.03.2026</div>
+      <h2>Start projektu</h2>
+      <p>Decyzja o budowie bazy w lesie i rozpoczęcie planowania całego projektu.</p>
+    </div>
+
+    <div class="item">
+      <div class="dot"></div>
+      <div class="date">15.03.2026</div>
+      <h2>Wybór lokalizacji</h2>
+      <p>Znalezienie odizolowanego miejsca, które spełniało wszystkie warunki budowy.</p>
+    </div>
+
+    <div class="item">
+      <div class="dot"></div>
+      <div class="date">22.03.2026</div>
+      <h2>Pierwsza konstrukcja</h2>
+      <p>Rozpoczęcie budowy pierwszych elementów bazy i testy stabilności konstrukcji.</p>
+    </div>
+
+    <div class="item">
+      <div class="dot"></div>
+      <div class="date">04.04.2026</div>
+      <h2>Pierwsza noc w bazie</h2>
+      <p>Pierwsze nocowanie w terenie i sprawdzenie działania bazy w praktyce.</p>
+    </div>
+
+  </section>
+
+
+
+  </footer>
+
+</body>
+</html>
